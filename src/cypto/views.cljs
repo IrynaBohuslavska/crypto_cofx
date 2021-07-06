@@ -6,11 +6,11 @@
 
 
 (defn display-data [{:keys [price] symbol :symbol}]
-  [(re-frame/inject-cofx :now)]
+  (let [time (re-frame/subscribe [::subs/time])]
   [:tr {:key symbol}
    [:td symbol]
    [:td price]
-   [:td :now]])
+   [:td (str @time)]]))
 
 (defn main-panel []
   (let [data (re-frame/subscribe [::subs/data])]

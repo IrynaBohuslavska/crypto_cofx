@@ -1,12 +1,11 @@
 goog.provide('cypto.views');
-cypto.views.display_data = (function cypto$views$display_data(p__36945){
-var map__36946 = p__36945;
-var map__36946__$1 = cljs.core.__destructure_map(map__36946);
-var symbol = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__36946__$1,new cljs.core.Keyword(null,"symbol","symbol",-1038572696));
-var price = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__36946__$1,new cljs.core.Keyword(null,"price","price",22129180));
-new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [re_frame.core.inject_cofx.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"now","now",-1650525531))], null);
-
-return new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tr","tr",-1424774646),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),symbol], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),symbol], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),price], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.Keyword(null,"now","now",-1650525531)], null)], null);
+cypto.views.display_data = (function cypto$views$display_data(p__36535){
+var map__36536 = p__36535;
+var map__36536__$1 = cljs.core.__destructure_map(map__36536);
+var symbol = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__36536__$1,new cljs.core.Keyword(null,"symbol","symbol",-1038572696));
+var price = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__36536__$1,new cljs.core.Keyword(null,"price","price",22129180));
+var time = re_frame.core.subscribe.cljs$core$IFn$_invoke$arity$1(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("cypto.subs","time","cypto.subs/time",-1436773674)], null));
+return new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tr","tr",-1424774646),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),symbol], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),symbol], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),price], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.deref(time))], null)], null);
 });
 cypto.views.main_panel = (function cypto$views$main_panel(){
 var data = re_frame.core.subscribe.cljs$core$IFn$_invoke$arity$1(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("cypto.subs","data","cypto.subs/data",-1184636557)], null));

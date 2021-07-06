@@ -4,6 +4,7 @@
    [cypto.db :as db]
    [ajax.core :as ajax]
    [day8.re-frame.http-fx]
+   [clojure.string :as str]
    [day8.re-frame.tracing :refer-macros [fn-traced]]))
 
 (re-frame/reg-event-db
@@ -20,7 +21,7 @@
 (re-frame/reg-cofx
  :now
  (fn [cofx _data]
-   (assoc cofx :now (js/Date.))))
+   (assoc cofx :now (subs (str (js/Date.)) 15 24))))
 
 
 (re-frame/reg-event-fx
@@ -35,11 +36,9 @@
                  :on-failure      [:bad-http-result]}}))
 
 
-(re-frame/reg-event-db
+(re-frame/reg-event-fx              
  ::fetch-success
-;;  [(re-frame/inject-cofx :now)]
- (fn
-   [db [_ response]]
-  ;;  (print :now)
-   (assoc db :data (js->clj response))))
+ [(re-frame/inject-cofx :now)]
+ (fn [{:keys [db now]} [_ response]]                
+   {:db (assoc db :data response :time now)}))
 

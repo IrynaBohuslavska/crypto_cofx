@@ -17,3 +17,8 @@
  ::data
  (fn [db]
    (:data db)))
+
+(re-frame/reg-sub
+ ::time
+ (fn [db]
+   (:time db)))

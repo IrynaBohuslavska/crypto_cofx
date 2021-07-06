@@ -8,5 +8,8 @@ return new cljs.core.Keyword(null,"loading","loading",-737050189).cljs$core$IFn$
 re_frame.core.reg_sub.cljs$core$IFn$_invoke$arity$variadic(new cljs.core.Keyword("cypto.subs","data","cypto.subs/data",-1184636557),cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([(function (db){
 return new cljs.core.Keyword(null,"data","data",-232669377).cljs$core$IFn$_invoke$arity$1(db);
 })], 0));
+re_frame.core.reg_sub.cljs$core$IFn$_invoke$arity$variadic(new cljs.core.Keyword("cypto.subs","time","cypto.subs/time",-1436773674),cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([(function (db){
+return new cljs.core.Keyword(null,"time","time",1385887882).cljs$core$IFn$_invoke$arity$1(db);
+})], 0));
 
 //# sourceMappingURL=cypto.subs.js.map
