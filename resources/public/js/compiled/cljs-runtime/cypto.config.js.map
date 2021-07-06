@@ -1,0 +1,1 @@
+{"version":3,"sources":["cypto/config.cljs"],"mappings":";AAEA,AAAKA,4BACMC","names":["cypto.config/debug?","js/goog.DEBUG"],"sourcesContent":["(ns cypto.config)\n\n(def debug?\n  ^boolean goog.DEBUG)\n"]}

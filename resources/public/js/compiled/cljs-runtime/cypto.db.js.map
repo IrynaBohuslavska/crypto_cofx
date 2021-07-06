@@ -1,0 +1,1 @@
+{"version":3,"sources":["cypto/db.cljs"],"mappings":";AAEA,sBAAA,2CAAA,qDAAA,tHAAKA","names":["cypto.db/default-db"],"sourcesContent":["(ns cypto.db)\n\n(def default-db\n  {:name \"re-frame\"})\n"]}
